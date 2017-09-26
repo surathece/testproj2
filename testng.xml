@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" verbose="1" name="Suite" parallel="tests">
+<listeners>
+	<listener class-name="capscreen.TestNGListerner" />
+</listeners>
+  <test name="Test">
+  <groups>
+  <run>
+  <exclude name="broken" />
+  <include name="login" />
+  </run>
+  </groups>
+    <classes>
+      <class name="pagemodel.logintest"/>
+      <class name="repos.test1"/>
+      <class name="iframedemo.demowait"/>
+      <class name="iframedemo.demoiframe"/>
+      <class name="repos.testselchr"/>
+      <class name="capscreen.fbscreen"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
